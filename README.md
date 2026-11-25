@@ -42,9 +42,6 @@ Output: Predicted next frame (1 x 40 x 40)
 
 ## Project Status
 
-
-## Project Status
-
 Completed — Version 1.0
 
 - Implemented a custom Pong simulation.
