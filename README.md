@@ -1,55 +1,31 @@
-
 # Neural Pong World Model
 
-A deep learning project that recreates the dynamics of Pong
-using a convolutional neural network (CNN).
+A machine learning project that trains a neural network to recreate Pong by learning from gameplay rather than relying on traditional game physics.
 
-Instead of relying on a traditional physics engine during
-inference, the model learns to predict future game frames
-from previous frames and player actions.
+## How It Works
 
-## Project Objectives
+- Created a simple Pong game using Python.
+- Generated 200,000 gameplay frames for training.
+- Trained a convolutional neural network (CNN) to predict the next frame using four previous frames and a player's input.
+- Used the model's own predictions to generate gameplay.
+- Compared the original game with the neural network's predictions.
 
-- Generate 200,000 simulated Pong gameplay frames.
-- Develop an action-conditioned convolutional neural network.
-- Predict future frames from four consecutive frames.
-- Generate gameplay through autoregressive predictions.
-- Compare simulated and neural gameplay accuracy.
-- Investigate compounding prediction errors.
+## Results
+
+- Training loss decreased by 72.7%.
+- Validation loss decreased by 24.3%.
+- The model accurately predicted 26 consecutive frames in the evaluated gameplay sequence.
+
+The model successfully learned short-term game dynamics, although its predictions became less accurate over time as errors accumulated.
 
 ## Technologies
 
-- Python
-- PyTorch
-- NumPy
-- Matplotlib
-- Google Colab
-- CUDA
+Python, PyTorch, NumPy, Matplotlib and Google Colab.
 
-## Model Architecture
+## How to Run
 
-Input: 4 grayscale frames + 3 action channels
-(7 x 40 x 40)
+Open the notebook in Google Colab, enable GPU acceleration and run the cells in order.
 
-Output: Predicted next frame (1 x 40 x 40)
+## Inspiration
 
-## Evaluation
-
-- Training and validation loss
-- Intersection over Union (IoU)
-- Long-term prediction stability
-- Side-by-side gameplay comparison
-
-## Project Status
-
-Completed — Version 1.0
-
-- Implemented a custom Pong simulation.
-- Trained an action-conditioned convolutional neural network.
-- Implemented autoregressive gameplay generation without
-  relying on a traditional physics engine during inference.
-- Developed interactive player controls.
-- Evaluated model performance using training loss,
-  validation loss, and Intersection over Union (IoU).
-- Created side-by-side comparisons of real and
-  neural network-generated gameplay.
+[DIAMOND World Model](https://github.com/eloialonso/diamond)
