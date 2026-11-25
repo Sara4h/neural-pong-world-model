@@ -42,4 +42,17 @@ Output: Predicted next frame (1 x 40 x 40)
 
 ## Project Status
 
-In development. Model training and evaluation are underway.
+
+## Project Status
+
+Completed — Version 1.0
+
+- Implemented a custom Pong simulation.
+- Trained an action-conditioned convolutional neural network.
+- Implemented autoregressive gameplay generation without
+  relying on a traditional physics engine during inference.
+- Developed interactive player controls.
+- Evaluated model performance using training loss,
+  validation loss, and Intersection over Union (IoU).
+- Created side-by-side comparisons of real and
+  neural network-generated gameplay.
